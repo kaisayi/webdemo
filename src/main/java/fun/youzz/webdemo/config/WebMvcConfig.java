@@ -23,22 +23,4 @@ import java.util.Locale;
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
 
-    @Bean  // 自定义视图解析器
-    public ViewResolver getViewResolver() {
-        return new MyViewResolver();
-    }
-
-    // 视图跳转
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/test").setViewName("hallo");
-    }
-
-    public static class MyViewResolver implements ViewResolver {
-
-        @Override
-        public View resolveViewName(String s, Locale locale) throws Exception {
-            return null;
-        }
-    }
 }
